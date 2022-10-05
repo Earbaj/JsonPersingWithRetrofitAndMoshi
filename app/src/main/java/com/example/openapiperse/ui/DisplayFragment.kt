@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import com.example.openapiperse.R
+import com.example.openapiperse.adapter.ListItemAdapter
 import com.example.openapiperse.databinding.FragmentDisplayBinding
 import com.example.openapiperse.viewmodel.DisplayViewModel
 
@@ -23,6 +24,7 @@ class DisplayFragment : Fragment() {
         val binding = FragmentDisplayBinding.inflate(inflater)
         binding.lifecycleOwner = this
         binding.viewModel = viewModel
+        binding.photosGrid.adapter = ListItemAdapter()
         return binding.root
     }
 }

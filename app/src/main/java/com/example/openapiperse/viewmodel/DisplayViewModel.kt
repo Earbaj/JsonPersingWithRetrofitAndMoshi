@@ -21,7 +21,7 @@ class DisplayViewModel: ViewModel(){
     }
 
     fun getAllData(){
-        _status.value = "Perse Json Data From Api"
+        //_status.value = "Perse Json Data From Api"
         viewModelScope.launch {
             try {
                 _photo.value = JsonApi.retrofitService.getAllData()
