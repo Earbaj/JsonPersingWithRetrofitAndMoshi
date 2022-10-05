@@ -16,10 +16,10 @@ fun bindImage(imgView: ImageView, imgUrl: String?) {
     }
 }
 
-//@BindingAdapter("listData")
-//fun bindRecyclerView(recyclerView: RecyclerView,
-//                     data: List<JsonData>?) {
-//    val adapter = recyclerView.adapter as ListItemAdapter
-//    adapter.submitList(data)
-//
-//}
+@BindingAdapter("listData")
+fun bindRecyclerView(recyclerView: RecyclerView,
+                     data: List<JsonData>?) {
+    val adapter = recyclerView.adapter as ListItemAdapter
+    adapter.submitList(data)
+
+}
