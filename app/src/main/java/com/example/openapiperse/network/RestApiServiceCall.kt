@@ -1,5 +1,6 @@
 package com.example.openapiperse.network
 
+import com.example.openapiperse.data.JsonData
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 import retrofit2.Retrofit
@@ -19,7 +20,7 @@ private val retrofit = Retrofit.Builder()
 
 interface RestApiServiceCall {
     @GET("photos")
-    suspend fun getAllData(): String
+    suspend fun getAllData(): List<JsonData>
 }
 
 object JsonApi {
